@@ -1,0 +1,99 @@
+% Fact sheet for MATH 300, for Fall 2014.
+%
+\documentclass[12pt]{article}
+% Nice page size.
+\setlength{\textwidth}{7in} \setlength{\textheight}{9.8in}
+\setlength{\topmargin}{-1in} \setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+%
+% No page numbering.
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{algpseudocode}
+\begin{document}
+\thispagestyle{empty}
+\includegraphics{../../../psulogo_horiz_bw.eps}\hfill\includegraphics{../../../deptlogo}
+\vspace{10pt}
+\begin{center}
+{\large\bf STAT 672}    \\*[5pt] {\Large Statistical Learning II}
+\\*[12pt] {\large Fall 2019}
+\\ {\large Homework 2}
+\\ {\large Due February 5$^{th}$ at the beginning of class}
+\end{center}
+\vspace{1cm}
+\noindent
+\section{Kernel centering}
+Let $\mathcal{X}$ be a non empty set, $K$ a kernel over $\mathcal{X}$ and $H$ the RKHS with kernel $K$. Let $x_1,\ldots,x_n$, be $n$ points in $\mathcal{X}$. 
+
+Let $K_c$ like ``K centered\rq\rq{} be another kernel over $\mathcal{X}$ defined by 
+\begin{equation}
+K_c(x,y)=\langle K(.,x)- \bar{f}(.), K(.,y)-\bar{f}(.)\rangle_H \mbox{, with } \bar{f}(.)=\frac{1}{n}\sum_{i=1}^n K(.,x_i)
+\end{equation}
+\begin{enumerate}
+\item Verify that $K_c$ is a positive definite kernel;
+
+\noindent
+Let $H_c$ be the RKHS with reproducing kernel $H_c$. 
+\item (**) Verify that for any $f \in H_c$, 
+\begin{equation}
+\frac{1}{n} \sum_{i=1}^n f(x_i)=0
+\end{equation}
+In homework 1, you have learned to sample functions from a RKHS with kernel $K$ over the set $\mathcal{X}=\{-m,\ldots,m\}$ according to the probability 
+\begin{equation}
+p(f)=Ce^{-\frac{||f||^2}{2}}
+\end{equation} 
+Here, you are asked to do the same thing but over the RKHS of a centered kernel $K_c$. Specifically, choose  $m=10$, $n=11$, $x_1=-10,x_2=-9,\ldots,x_{11}=0$. 
+\item (**) Write $K_c$ in term of $K$ using matrix operations. 
+\item Choose the Gaussian kernel with $\tau=10$, and show 10 samples. Figure \ref{fig:Gauss_constraint} shows examples of what you should find. Check that for each curve $f$, 
+\begin{equation}
+\frac{1}{11}\sum_{i=-10}^0 f(i)=0
+\end{equation}
+up to numerical errors.  
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{Gauss_constraint}
+\caption{\label{fig:Gauss_constraint}Example of 10 samples of \lq{}\rq{}functions\rq\rq{} of the RKHS over $\{-10,\ldots,10\}$ with the Gaussian kernel, $\tau=10$ under the centering constraint $\frac{1}{11}\sum_{i=-10}^0 f(i)=0$}
+\end{figure}
+\end{enumerate}
+
+\section{Kernel PCA}
+$\mathcal{X}$ a non empty set, $x_1,\ldots,x_n \in \mathcal{X}$, $K$ a centered kernel, that is, starting with a kernel $G$ over $\mathcal{X}$, 
+  \begin{equation}
+K(x,y)=\langle G(.,x)- \bar{f}, G(.,y)-\bar{f}\rangle_H \mbox{, with } \bar{f}=\frac{1}{n}\sum_{i=1}^n G(.,x_i)
+\end{equation}
+Assume for simplicity that $K$ is full rank. Notate $\lambda_1 \geq \lambda_2 \geq \ldots \geq \lambda_n>0$ the e-values and $u_1,\ldots,u_n$ the corresponding e-vectors. 
+We have seen in class that the principal directions $f_1,\ldots,f_n$ are 
+\begin{equation}
+f_i=\sum_{j=1}^n \alpha_{ij} K(.,x_j), \mbox{ with } \alpha_i = \lambda_i^{-\frac{1}{2}}u_i
+\end{equation}
+\begin{enumerate}
+\item verify that 
+\begin{equation}
+\langle f_i,f_k \rangle_H=\delta_{ik}
+\end{equation}
+where $\delta_{ik}=1$ if $i=k$ and $\delta_{ik}=0$ if $i \not = k$. 
+\item Show that the orthogonal projection of any $f \in H$, the RKHS with kernel $K$ onto 
+\begin{equation}
+V=span\{f_1,\ldots,f_n\}
+\end{equation} is 
+\begin{equation}
+\pi_v(f)=\langle f,f_1\rangle_H f_1+\ldots,\langle f,f_n\rangle_H f_n
+\end{equation}
+
+Now, let us project the feature functions of $x_1,\ldots,x_n$, that is $K(.,x_1), \ldots K(.,x_n)$. Show that 
+ \begin{equation}
+\langle K(.,x_k),f_i \rangle = \lambda_i^\frac{1}{2} u_{ki}
+\end{equation}
+\item Perform kernel PCA on the MNIST dataset. Choose the digits 1 and 7. Start with the linear kernel $G(x,y)=x^Ty$. Sample $n=500$ digits. Show 8 projections onto the first 8 principal directions. Do not forget to center the kernel. your result should look like Figure \ref{fig:kpca}. 
+\item Redo the same but this time with a non linear kernel of your choice. 
+\begin{figure}
+\includegraphics[width=0.8\textwidth]{kpca-mnist-linear}
+\caption{\label{fig:kpca}Example of resu;ts with Kernel PCA}
+\end{figure}
+ 
+\end{enumerate}
+\end{document}
