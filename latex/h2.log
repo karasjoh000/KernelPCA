@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 FEB 2020 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 FEB 2020 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,12 +848,13 @@ l.76         \end{equation}
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.111 ...21}\sum_{i=-10}^0\sum_{j=-10}^0 [ij+50]\]
-                                                  ]pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.116         \begin{equation}
-                              pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}) has been already used, duplicate ignored
+l.129         \[\mathbb{1} = [1]_{i\ (1,n)}\]
+                                             pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.129         \[\mathbb{1} = [1]_{i\ (1,n)}\]
+                                             ]pdfTeX warning (ext4): destination with the same identifier (name{equation.1.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.133         \begin{equation}
@@ -872,13 +873,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
 Here is how much of TeX's memory you used:
  34644 strings out of 492995
  761745 string characters out of 6132704
- 842202 words of memory out of 5000000
+ 840202 words of memory out of 5000000
  37765 multiletter control sequences out of 15000+600000
  10213 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,11n,69p,10375b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.pdf (3 pages, 163157 bytes).
+Output written on /Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.pdf (3 pages, 158788 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
