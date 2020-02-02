@@ -8,6 +8,7 @@
 \usepackage{rotating}
 \usepackage{amsmath, bm, amssymb}
 \usepackage{amsthm}
+\usepackage{bbold}
 
 \begin{document}
 \thispagestyle{empty}
@@ -112,7 +113,33 @@ Let $K_c$ like ``K centered\rq\rq{} be another kernel over $\mathcal{X}$ defined
 
     \item (**) Write $K_c$ in term of $K$ using matrix operations. 
     
+        \begin{equation} 
+            \begin{aligned}
+                K_c(x,y) &= K(x,y) + \frac{1}{n}\sum_{i=1}^{n}K(x,x_i) + \frac{1}{n} \sum_{i=1}^{n} K(y,x_i) + 
+                \frac{1}{n^2} \sum_{i=1}^{n} \sum_{j=1}^{n} K(x_i, x_j) \notag \\
+                &= K(x,y) - \frac{1}{n}\bm{K_y}^T\mathbb{1} - \frac{1}{n}\bm{K_x}^T\mathbb{1} + \frac{1}{n}\mathbb{1}^T\bm{K}\mathbb{1}
+            \end{aligned}
+        \end{equation}
+        
+        where  
+        
+        \[\bm{K} = [K(x_i,x_j)]_{ij\ (n,n)}\] 
+        \[\bm{K_y} = [K(y,x_i)]_{i\ (1,n)}\]
+        \[\bm{K_y} = [K(x,x_i)]_{i\ (1,n)}\]
+        \[\mathbb{1} = [1]_{i\ (1,n)}\]
+        
+        The centered kernel matrix can be written as: 
+        
+        \begin{equation} 
+            \begin{aligned}
+                \bm{K_c} &= \bm{K} - \bm{UK} - \bm{KU} - \bm{UKU} \\
+                &= (\bm{I} - \bm{U})\bm{K}(\bm{I-U}) \notag
+            \end{aligned}
+        \end{equation}
 
+        where 
+        \[\bm{U} = \bigg[\frac{1}{n}\bigg]_{ij\ (n,n)}\]
+        \[\bm{I}_{\ (n,n)} \mbox{ is the indentity matrix}\]
 
     \item Choose the Gaussian kernel with $\tau=10$, and show 10 samples. 
         
