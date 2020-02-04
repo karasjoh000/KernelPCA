@@ -294,9 +294,13 @@ INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/bbold/bbold10.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/bbold/bbold7.tfm
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/tfm/public/bbold/bbold5.tfm
 INPUT /usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /Users/johnkarasev/PersonalProjects/stat672/hw2/latex/./figures/t10.pdf
+INPUT ./figures/t10.pdf
+INPUT ./figures/t10.pdf
 INPUT /Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.aux
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
+INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb

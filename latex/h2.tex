@@ -149,8 +149,36 @@ Let $K_c$ like ``K centered\rq\rq{} be another kernel over $\mathcal{X}$ defined
         
         up to numerical errors.  
 
-        Statistics of 120 sampled function averages: $(min, max, average) = (-3.43, 2.3, 2.44e-12)$
+        \begin{equation} 
+            \begin{aligned}
+                \frac{1}{11}\sum_{i=-10}^0\bm{f}(i) = \frac{1}{11}\sum_{i=-10}^0
+                    \begin{bmatrix} 
+                        f_1(i) \\
+                        f_2(i) \\
+                        f_3(i) \\
+                        \vdots \\
+                        f_9(i) \\
+                        f_{10}(i) 
+                    \end{bmatrix}
+                    = 
+                    \begin{bmatrix} 
+                        -0.00050791 \\
+                        -0.02180374 \\
+                        -0.03592173 \\
+                        -0.0435211 \\
+                        -0.04306572 \\
+                        -0.03498534 \\
+                        -0.01940224 \\
+                        0.00311266 \\
+                        0.03170139 \\
+                        0.06432604
+                    \end{bmatrix} \notag
+            \end{aligned}
+        \end{equation}
 
+        \vspace{0.5cm}
+        \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/t10.pdf}}
+        \vspace{0.5cm}
 
 \end{enumerate}
 
@@ -170,6 +198,23 @@ We have seen in class that the principal directions $f_1,\ldots,f_n$ are
 
     \item verify that \[\langle f_i,f_k \rangle_H=\delta_{ik}\]
     where $\delta_{ik}=1$ if $i=k$ and $\delta_{ik}=0$ if $i \not = k$. 
+
+    \begin{equation} 
+        \begin{aligned}
+            \langle f_i, f_k \rangle_{\mathcal{H}} &= \lambda^{-\frac{1}{2}}_i \bm{u}_i^T\bm{K}\bm{u}_k \lambda_k^{-\frac{1}{2}} \notag 
+            = \lambda^{-\frac{1}{2}}_i \bm{u}_i^T\bm{U \Lambda U}^T\bm{u}_k \lambda_k^{-\frac{1}{2}} \\
+            &= \lambda^{-\frac{1}{2}}_i \bm{e}_i^T\bm{\Lambda}\bm{e}_k \lambda_k^{-\frac{1}{2}} 
+            = \lambda^{-\frac{1}{2}}_i \lambda_i\bm{e}_i^T\bm{e}_k \lambda_k^{-\frac{1}{2}} 
+            = \frac{\lambda^{\frac{1}{2}}_i}{\lambda_k^{-\frac{1}{2}}} \bm{e}_i^T\bm{e}_k \\
+            &= 
+                \begin{cases} 
+                    0 \mbox{, if $i \ne j$} \\
+                    1 \mbox{, else}
+                \end{cases} 
+            = \delta_{ik}
+        \end{aligned}
+    \end{equation}
+    where \[e_k = [1\ if\ k=j\ else\ 0]_{(j,1)}\]
     
     \item Show that the orthogonal projection of any $f \in H$, the RKHS with kernel $K$ onto 
         
@@ -190,7 +235,7 @@ We have seen in class that the principal directions $f_1,\ldots,f_n$ are
 
 
     \item Redo the same but this time with a non linear kernel of your choice.  
-    \[\langle f_i, f_k \rangle_{\mathcal{H}} = \lambda^{-\frac{1}{2}}_i\]
+    
     
 
 \end{enumerate}
