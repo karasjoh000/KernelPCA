@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1580775669 "h2.tex" "/Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.pdf" "h2" 1580775671
-  "/Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.aux" 1580775670 1071 9ac10c4093d96d6d9cc72a9a63629c5d ""
+["pdflatex"] 1580846076 "h2.tex" "/Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.pdf" "h2" 1580846077
+  "/Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.aux" 1580846076 1071 9ac10c4093d96d6d9cc72a9a63629c5d ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1480098698 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1480098698 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -195,12 +195,12 @@
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
   "figures/t10.pdf" 1580761843 6916 178acb59572e9af3330361191c8417b5 ""
-  "h2.aux" 1580775670 1071 9ac10c4093d96d6d9cc72a9a63629c5d ""
-  "h2.tex" 1580775669 10540 9be7dd77e833c0e33fc282dae70b18c4 ""
+  "h2.aux" 1580846076 1071 9ac10c4093d96d6d9cc72a9a63629c5d ""
+  "h2.tex" 1580846075 10819 9b585ef25455a9b560bff41bf3f962d0 ""
   (generated)
   "/Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.aux"
+  "h2.aux"
   "h2.log"
+  "h2.pdf"
   "/Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.log"
   "/Users/johnkarasev/PersonalProjects/stat672/hw2/latex/h2.pdf"
-  "h2.pdf"
-  "h2.aux"
