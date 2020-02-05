@@ -205,10 +205,10 @@ We have seen in class that the principal directions $f_1,\ldots,f_n$ are
             = \lambda^{-\frac{1}{2}}_i \bm{u}_i^T\bm{U \Lambda U}^T\bm{u}_k \lambda_k^{-\frac{1}{2}} \\
             &= \lambda^{-\frac{1}{2}}_i \bm{e}_i^T\bm{\Lambda}\bm{e}_k \lambda_k^{-\frac{1}{2}} 
             = \lambda^{-\frac{1}{2}}_i \lambda_i\bm{e}_i^T\bm{e}_k \lambda_k^{-\frac{1}{2}} 
-            = \frac{\lambda^{\frac{1}{2}}_i}{\lambda_k^{-\frac{1}{2}}} \bm{e}_i^T\bm{e}_k \\
+            = \frac{\lambda^{\frac{1}{2}}_i}{\lambda_k^{\frac{1}{2}}} \bm{e}_i^T\bm{e}_k \\
             &= 
                 \begin{cases} 
-                    0 \mbox{, if $i \ne j$} \\
+                    0 \mbox{, if $i \ne k$} \\
                     1 \mbox{, else}
                 \end{cases} 
             = \delta_{ik}
@@ -224,18 +224,74 @@ We have seen in class that the principal directions $f_1,\ldots,f_n$ are
 
         \[\pi_v(f)=\langle f,f_1\rangle_H f_1+\ldots,\langle f,f_n\rangle_H f_n\]
 
+        Since $\{f_1, ..., f_n\}$ is an othronormal set: 
+
+        \begin{equation} 
+            \begin{aligned}
+                \mbox{proj}_Vf &= \sum_{i=1}^n \mbox{proj}_{f_i} f \notag \\
+                &= \sum_{i=1}^n \frac{\langle f, f_i\rangle_\mathcal{H}}{\|f_i\|^2_\mathcal{H}} f_i
+                = \sum_{i=1}^n \langle f, f_i\rangle_\mathcal{H} f_i \mbox{ since norm is 1 (see prevous question)}
+            \end{aligned}
+        \end{equation}
+
+
         Now, let us project the feature functions of $x_1,\ldots,x_n$, that is $K(.,x_1), \ldots K(.,x_n)$. Show that 
 
         \[\langle K(.,x_k),f_i \rangle = \lambda_i^\frac{1}{2} u_{ki}\]
+
+        \begin{equation} 
+            \begin{aligned}
+                \langle K(.,x_k), f_i\rangle &= e_k^TKu_i\lambda_i^{-\frac{1}{2}} \notag \\
+                &= e_k^T U \Lambda U^Tu_i\lambda_i^{-\frac{1}{2}} \\
+                &= e_k^T U \Lambda e_i\lambda_i^{-\frac{1}{2}} \\
+                &= e_k^T U e_i \lambda_i \lambda_i^{-\frac{1}{2}} \\
+                &= e_k^T u_i \lambda_i^{\frac{1}{2}} = u_{ki} \lambda_i^{\frac{1}{2}}
+            \end{aligned}
+        \end{equation}
     
     \item Perform kernel PCA on the MNIST dataset. Choose the digits 1 and 7. 
     Start with the linear kernel $G(x,y)=x^Ty$. Sample $n=500$ digits. Show 8 
     projections onto the first 8 principal directions. Do not forget to center the 
     kernel. 
 
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/l12.pdf}}
+    \vspace{0.5cm}
 
-    \item Redo the same but this time with a non linear kernel of your choice.  
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/l34.pdf}}
+    \vspace{0.5cm}
+
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/l56.pdf}}
+    \vspace{0.5cm}
+
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/l78.pdf}}
+    \vspace{0.5cm}
+
+
+    \item Redo the same but this time with a non linear kernel of your choice. 
+        \[(x^Ty+100)^2\]
+
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/p12.pdf}}
+    \vspace{0.5cm}
+
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/p34.pdf}}
+    \vspace{0.5cm}
+
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/p56.pdf}}
+    \vspace{0.5cm}
+
+    \vspace{0.5cm}
+    \adjustbox{valign=t}{\includegraphics[width=14cm]{./figures/p78.pdf}}
+    \vspace{0.5cm}
     
+
+
 %     &\ \ e_k^T K u_i \lambda_i^{-\frac{1}{2}} \\
 % &= e_k^T U \Lambda U^T u_i \lambda_i^{-\frac{1}{2}} \\
 % &= e_k^T U \Lambda e_i \lambda_i^{-\frac{1}{2}} = e_k^T U e_i \lambda_i^{\frac{1}{2}} \\
